@@ -1,1 +1,5 @@
-<%= @final_score %>
+<div class="container h-100 d-flex flex-column justify-content-center align-items-center">
+  <h1>Results</h1>
+  <p><%= @final_score %></p>
+  <%= link_to 'Back to home', root_path, class: 'btn btn-primary' %>
+</div>

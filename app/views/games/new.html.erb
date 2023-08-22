@@ -9,9 +9,12 @@
     <form class="row text-center gap-3" data-turbo="false" action="score" method="post">
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
       <%= hidden_field_tag :sampled_letters, @letters %>
+      <%= hidden_field_tag :end_time, Time.now %>
+      <%= hidden_field_tag :start_time, @start_time %>
+
       <label for="guess">Try to find the best word with the letters above:</label>
       <div class="d-flex justify-content-center gap-3">
-        <input class="form-control w-50" type="text" name="word">
+        <input class="form-control w-50" type="text" name="word" required>
         <input class="btn btn-primary" type="submit" value="Give a shot!">
       </div>
     </form>
